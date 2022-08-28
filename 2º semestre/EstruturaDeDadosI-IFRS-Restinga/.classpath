@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="IGORFARIAS_ExeVetorComClasses/src/" kind="src" path=""/>
+	<classpathentry kind="src" path="IGORFARIAS_ExeVetorComClasses/src"/>
+	<classpathentry kind="output" path="IGORFARIAS_ExeVetorComClasses/bin"/>
+</classpath>
