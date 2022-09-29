@@ -7,7 +7,7 @@ USE discos2;
 
 #SELECT * FROM disco JOIN gravadora WHERE disco.gravadora_id=gravadora.gravadora_id;
 
-#SELECT musica.nome, album.nome, album.banda FROM musica JOIN album WHERE musica.album_id=album.album_id;
+SELECT musica.nome, album.nome, album.banda FROM musica JOIN album WHERE musica.album_id=album.album_id;
 -- apresentar todos os nomes de gravadoras
 
 -- mostrar todos os discos da gravador
@@ -34,7 +34,7 @@ USE discos2;
 
 #SELECT CONCAT(album.nome, " - ", musica.nome) FROM musica JOIN album WHERE musica.album_id = album.album_id ORDER BY album.nome, musica.nome ASC;
 
-SELECT CONCAT(album.nome, " - ", musica.nome) FROM musica 
-	JOIN album 
-	USING (album_id) 
-	ORDER BY album.nome;
+#SELECT CONCAT(album.nome, " - ", musica.nome) FROM musica 
+#	JOIN album 
+#	USING (album_id) 
+#	ORDER BY album.nome;
