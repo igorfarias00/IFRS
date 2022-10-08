@@ -10,6 +10,11 @@ SELECT * FROM funcionario WHERE  EXISTS (
 	SELECT setor.setor_id FROM setor WHERE chefe IS NULL AND setor.setor_id = funcionario.setor_id
 );
 
-SELECT * FROM funcionario WHERE funcionario.setor_id = ANY(
-	
-);
+SELECT * FROM funcionario JOIN setor on setor.setor_id = funcionario.funcionario_id AND setor.setor_id IS NULL;
+
+
+SELECT * FROM funcionario LEFT JOIN setor on setor.setor_id = funcionario.funcionario_id AND setor.setor_id IS NULL AND funcionario.setor_id IS NULL;
+
+(SELECT * FROM funcionario WHERE EXISTS(SELECT funcionario.setor_id WHERE funcionario.setor_id IS NULL)) 
+UNION 
+( SELECT * FROM funcionario WHERE EXISTS(SELECT setor.setor_id FROM setor WHERE chefe IS NULL AND setor.setor_id = funcionario.setor_id));
