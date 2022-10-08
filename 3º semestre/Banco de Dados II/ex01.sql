@@ -7,10 +7,6 @@ SELECT * FROM empresa WHERE nome LIKE "%Filial%";
 SELECT CONCAT(IF(sexo="feminino", "A funcionária " , "O funcionário "),  funcionario.nome, 
 				" pertence ao setor:", setor.nome ) 
 	FROM funcionario LEFT JOIN setor using(setor_id);
-    
-    
-    
-#SELECT * FROM setor;
 
 #3
 SELECT setor.nome, funcionario.nome FROM setor INNER JOIN funcionario ON(setor.chefe=funcionario.funcionario_id);
