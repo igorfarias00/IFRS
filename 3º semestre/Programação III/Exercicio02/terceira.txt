@@ -1,0 +1,23 @@
+{Título Principal, fonte verdana, verde e tamanho 20pt} Incluindo CSS na página
+
+{Parágrafo, fonte arial, vermelho e tamanho 12pt} Existem três formas para incluir o código CSS em seu projeto
+
+{Subtítulo, fonte verdana, azul e tamanho 14pt} Inline
+
+{Parágrafo, fonte arial, vermelho e tamanho 12pt} A primeira forma de aplicar CSS a uma página é utilizando o atributo style em elementos do HTML:
+
+{Imagem Exemplo03.jpg}
+
+{Subtítulo, fonte verdana, azul e tamanho 14pt} Interno
+
+{Parágrafo, fonte arial, vermelho e tamanho 12pt} A segunda forma é utilizar a tag style dentro do head da página HTML:
+
+{Imagem Exemplo04.jpg}
+
+{Subtítulo, fonte verdana, azul e tamanho 14pt} Externo
+
+{Parágrafo, fonte arial, vermelho e tamanho 12pt} E a última - porém a mais utilizada - maneira de aplicar CSS é criar um ou mais arquivos com extensão .css e incluí-los na estrutura head do HTML:
+
+{Imagem Exemplo05.jpg}
+
+{Âncora para a quarta página. Fonte arial, verde e tamanho 14pt} Próxima
