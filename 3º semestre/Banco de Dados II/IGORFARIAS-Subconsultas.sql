@@ -9,6 +9,7 @@
 -- P.S.: consultas comentadas foram trabalhadas em aula
 
 USE bd2;
+-- 1ª consulta
 
 -- SELECT * FROM funcionario WHERE  EXISTS (
 -- 	SELECT setor.setor_id FROM setor WHERE chefe IS NULL AND setor.setor_id = funcionario.setor_id
@@ -19,13 +20,24 @@ USE bd2;
 
 -- SELECT * FROM funcionario LEFT JOIN setor on setor.setor_id = funcionario.funcionario_id AND setor.setor_id IS NULL AND funcionario.setor_id IS NULL;
 
--- 1ª consulta
+
 (SELECT * FROM funcionario WHERE EXISTS(SELECT funcionario.setor_id WHERE funcionario.setor_id IS NULL)) 
 UNION 
 ( SELECT * FROM funcionario WHERE EXISTS(SELECT setor.setor_id FROM setor WHERE chefe IS NULL AND setor.setor_id = funcionario.setor_id));
 
+-- ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 
--- 2ª consulta
+-- sem subconsultas
+
+
+
+-- ----------------------------------------------------------------------------------------
+
+-- 2ª consulta - Selecione o nome dos funcionários (deve ser chamado de NomeDoFuncionario) 
+--               e nome do setor (deve ser chamado de NomeDoSetor) 
+--               que sejam apenas dos setores 3 ou 4. 
+
+
 -- com subconsulta
 SELECT nome as NomeDoFuncionario, 
 	   (SELECT nome FROM setor WHERE funcionario.setor_id=setor.setor_id) as NomeDoSetor 
@@ -37,6 +49,8 @@ SELECT nome as NomeDoFuncionario,
 --				FROM setor 
 --				WHERE funcionario.setor_id = setor.setor_id AND (setor.setor_id =3 OR setor.setor_id = 4) as NomeDoSetor,
 --        FROM funcionario;
+
+-- ¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨¨
 
 -- sem subconsulta
 SELECT funcionario.nome as NomeDoFuncionario, 
@@ -91,13 +105,14 @@ SELECT nome AS Chefe,
     salario,
     (SELECT empresa.nome 
 		FROM empresa 
-		WHERE empresa.empresa_id = (SELECT setor.empresa_id 
+		WHERE empresa_id = (SELECT setor.empresa_id 
 										FROM setor 
-                                        WHERE setor.chefe = funcionario.funcionario_id)) AS Empresa
+                                        WHERE setor.chefe = funcionario.funcionario_id )) AS Empresa
 	FROM funcionario 
     WHERE funcionario.funcionario_id = (SELECT setor.chefe 
 											   FROM setor 
-                                               WHERE setor.chefe = funcionario.funcionario_id) 
+                                               WHERE setor.chefe = funcionario.funcionario_id 
+													 AND setor.empresa_id IS NOT NULL) 
 	ORDER BY salario DESC;
 
 -- SELECT setor.nome, funcionario.nome FROM setor JOIN funcionario WHERE funcionario.funcionario_id = setor.chefe; -- d
@@ -111,6 +126,46 @@ SELECT funcionario.nome as Chefe,
        JOIN setor ON (funcionario.funcionario_id = setor.chefe)
        JOIN empresa ON ( setor.empresa_id = empresa.empresa_id)
 	   ORDER BY salario DESC;
-       
--- SELECT * FROM setor; -- d
+
+
+SELECT funcionario.nome as Chefe,
+	   setor.nome as Setor,
+       funcionario.salario,
+       empresa.nome as Empresa
+       FROM setor 
+       JOIN funcionario 
+			ON(funcionario.funcionario_id = setor.chefe)
+	   JOIN empresa
+			ON(setor.empresa_id = empresa.empresa_id)
+		ORDER BY salario DESC;
+        
+-- ###############################################################################################
+
+-- resoluções da Lista 1 - Agora com subconsultas
+
+--  1) Liste todas as empresas que tenham "filial" no nome
+--  2) Liste todos os funcionários com o seu setor, formando um campo neste formato: "A funcionária {nome} pertence ao 
+-- setor: {setor}" ou "O funcionário {nome} pertence ao setor: {setor}", dependendo do sexo.
+--  3) Liste todos os setores, exibindo o nome do chefe, caso o tenha
+--  4) Liste todas as empresas, seus setores e funcionários, incluindo as empresas que não têm setor e setores que não
+-- tenham funcionários
+--  5) Liste todos os setores que não tenham funcionários
+--  6) Liste todos os chefes e seus salários
+--  7) Liste os 3 funcionários com maior salário
+--  8) Liste os 3 funcionários com menor salário
+--  9) Liste o homem com o maior salário
+--  10) Liste a mulher com o maior salário
+
+-- ---------------------------------------------------------------------------
+-- 1) Liste todas as empresas que tenham "filial" no nome
+
+SELECT nome FROM empresa;
+
+-- ---------------------------------------------------------------------------
+-- 2) Liste todos os funcionários com o seu setor, formando um campo neste formato: "A funcionária {nome} pertence ao 
+-- setor: {setor}" ou "O funcionário {nome} pertence ao setor: {setor}", dependendo do sexo.
+
+SELECT IF(sexo = 'Masculino',
+		  (CONCAT("O funcionario ",nome) , CONCAT(" pertence ao setor: ",(SELECT setor.nome FROM setor WHERE setor.setor_id = funcionario.setor_id))),
+          nome) FROM funcionario;
 
