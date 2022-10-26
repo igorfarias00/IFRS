@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 19 de out. de 2022, 20:10:13
+    Author     : SAMSUNG
+*/
+h1 {
+    font-family: Verdana;
+    color: green;
+    font-size: 20pt;
+}
+
+h2,h3 {
+    font-family: Verdana;
+    color: #0000FF;
+    font-size: 14pt;
+}
+
+p {
+    font-family: Arial;
+    color: #FF0000;
+    font-size: 12pt;
+}
+
+/*declaração de classe usada apenas para marca html <p>*/
+p.grifados {
+    font-weight: bold;
+    color: #0000FF;
+}
+
+/*
+declaração de classe genérica usada para qualquer marca html
+.grifados {
+    font-weight: bold;
+    color: #0000FF;
+}
+*/
+
+a {
+    font-family: Arial;
+    color: #00FF00;
+    font-size: 14pt;
+}
+
+li {
+    color: #00FF00;
+}
+
+ul.menu li {
+    color: #FF0000;
+    float: left;
+    list-style: none;
+    border: 1px solid #000000;
+    margin-right: 10px;
+    padding: 20px;
+}
+
+ul.menu li a {
+    color: #FF0000;
+}
+
+a:hover {
+    color: #0000FF;
+}
+
+p:hover {
+    color: #0000FF;
+}
+
+a:visited {
+    color: #FF00FF;
+}
+
+#divisaoext {
+    position: absolute; /* relative */
+    left: 10%; 
+    top:  0px;
+    width: 80%;
+    height: 500px;
+    border: 1px solid #000000;
+    
+}
+
+#divisao1 {
+    position: absolute; /* relative */
+    left: 0px; 
+    top:  0px;
+    width: 33%;
+    height: 500px;
+    border: 1px solid #000000;
+}
+
+#divisao2 {
+    position: absolute; /* relative */
+    left: 33%; 
+    top:  0px;
+    width: 34%;
+    height: 500px;
+    border: 1px solid #0000FF;
+}
+
+#divisao3 {
+    position: absolute; /* relative */
+    left: 67%; 
+    top:  0px;
+    width: 33%;
+    height: 500px;
+    border: 1px solid #FF00FF;
+}
