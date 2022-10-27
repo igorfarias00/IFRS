@@ -24,7 +24,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-    height: 900px;
+    min-height: 100vh;
     background-color: rgba(162, 249, 162, 0.85);
 }
 
@@ -66,10 +66,21 @@ a {
 #penultimaNoticia {
     margin: 30px;
     color: blue;
+    height: 100px;
+    width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 #ultimaNoticia {
+    height: 100px;
+    width: 350px;
     margin: 30px;
     color: red;
+    overflow: hidden;
+    text-overflow:  ellipsis;
+    direction: ltr;
+
+
 }
 
 #coluna{
@@ -77,6 +88,7 @@ a {
    margin-top: 15px;
    margin-bottom: 15px;
    border: 1px solid black;
+   
 
 }
 
