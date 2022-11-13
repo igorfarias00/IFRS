@@ -1,0 +1,43 @@
+/*
+* Exercicio feito por Igor Balest Farias
+* para cadeira de Programação III
+*/
+
+/* ----------- corpo do site ------------- */
+.corpo {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70vw;
+    height: 100vh;
+}
+
+/* ---------------  bordas e titulos --------------------- */
+#imc fieldset{
+    background-color: rgb(124, 195, 249);
+    border: 2px solid orange;
+    margin: 5px;
+    
+}
+
+#titulo {
+    text-align: center;
+}
+
+#imc legend{
+    font-style: italic;
+    font-size: 16pt;
+    border: 2px solid orange;
+    padding: 7px;
+    background-color:rgb(124, 195, 249);
+}
+
+/* ----------------  elementos do formulario --------------------------- */
+#imc input{
+    margin: 5px;
+    padding: 3px;
+}
+
+
+
+
+

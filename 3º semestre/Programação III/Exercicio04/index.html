@@ -1,0 +1,64 @@
+<!-- Exercicio feito por Igor Balest Farias -->
+<!-- para cadeira de Programação III-->
+
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="estilo.css" rel="stylesheet" type="text/css">
+        <script src="valida.js"></script>
+
+        <title>Formulario IMC </title>
+    </head>
+    <body>
+        <div class="corpo">
+            
+            <form id="imc" method="post" action="" onsubmit="return validarForm()">
+                <legend id="titulo">Calculo IMC</legend>
+                <fieldset>
+                    <legend>Dados Pessoais </legend>
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="dadoPessoal" value="" id="nome"><br/>
+                    
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="dadoPessoal" value="" id="cpf"><br/>
+                    
+                    <label for="nascimento">Data de Nascimento: </label>
+                    <input type="text" name="dadoPessoal" id="nascimento" value="dd/mm/aaaa">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Gênero </legend>
+                    <input type="radio" id="masculino" name="genero" value="masculino" required="required">
+                    <label for="masculino">Masculino</label>
+
+                    <input type="radio" id="feminino" name="genero" value="feminino" >
+                    <label for="feminino">Feminino</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend> Peso e Altura</legend>
+                    
+                    <label for="peso">Peso: </label>
+                    <input type="number" id="peso" name="corpoDaPessoa" required="required">
+
+                    <label for="Altura">Altura: </label>
+                    <input type="number" id="altura" name="corpoDaPessoa" required="required">
+                    
+                </fieldset>
+
+                <fieldset>
+                    <button type="submit" name="validar" onsubmit="validarForm()"> Validar</button>
+                    <input type="reset" name="limpar" value="limpar">
+                    <input type="submit" name="enviar" value="Enviar">
+                </fieldset>
+
+            </form>
+
+        </div>   
+    </body>
+</html>
