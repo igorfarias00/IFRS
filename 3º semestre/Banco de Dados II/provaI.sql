@@ -7,12 +7,14 @@ USE bd2;
 --  	Faça 2 consultas, uma com o uso de subconsultas e outra sem o uso de subconsultas.
 
 -- s/ subconsultas
-SELECT funcionario.nome, funcionario.salario
+SELECT funcionario.nome, funcionario.salario, funcionario.setor_id
 		FROM funcionario 
-        LEFT JOIN setor USING (setor_id) 
-        WHERE funcionario.salario < 1500 OR ((setor.chefe = funcionario.funcionario_id) AND 
-			  funcionario.salario < 1500) 
+        INNER JOIN setor USING (setor_id) 
+        WHERE funcionario.salario < 1500 OR (setor.chefe = funcionario.funcionario_id AND 
+			  funcionario.salario > 1500) 
 		ORDER BY salario DESC;
+
+SELECT funcionario.salario, setor.setor_id FROM funcionario INNER JOIN setor USING (setor_id) WHERE funcionario.funcionario_id = setor.chefe ORDER BY funcionario.salario DESC;
 
 -- c/ subconsulta
 

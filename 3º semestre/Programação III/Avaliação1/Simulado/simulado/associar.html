@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Grêmio</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="global">
+            <div id="cabecalho">
+                
+            </div>
+            <div id="menuEsq">
+                <ul class="menuPrincipal">
+                    <li><a href="index.html">O Clube</a></li>
+                    <li><a href="governanca.html">Governança</a></li>
+                    <li><a href="equipe.html">Futebol</a></li>
+                    <li><a href="competicao.html">Competições</a></li>
+                    <li><a href="memorial.html">Memorial e Títulos</a></li>
+                    <li><a href="torcedor.html">Torcedor</a></li>
+                    <li><a href="associar.html">Associe-se</a></li>
+                </ul>
+            </div>
+            <div id="conteudo">
+                <h1>Cadastro de Sócio</h1>
+                <hr>
+                <form action="#">
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" id="cpf" size="10" maxlength="11"> (somente números)<br>
+                    
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" size="30"><br>
+                    
+                    <fieldset>
+                        <legend>Sexo: </legend>
+                        <input type="radio" name="sexo" id="sexoM" value="M"><label for="sexoM">Masculino</label> &nbsp;
+                        <input type="radio" name="sexo" id="sexoF" value="F"><label for="sexoF">Feminino</label>
+                    </fieldset>
+                    
+                    <label for="endereco">Endereço: </label><br>
+                    <textarea name="endereco" id="endereco" rows="2" cols="50"></textarea><br>
+                    
+                    <label for="cidade">Cidade: </label>
+                    <select name="cidade" id="cidade">
+                        <option value="">Selecione uma Cidade</option>
+                        <option value="POA">Porto Alegre</option>
+                        <option value="ERE">Erechim</option>
+                        <option value="VIA">Viamão</option>
+                    </select><br>
+                    
+                    <label for="data">Data de Nascimento: </label>
+                    <input type="date" name="data" id="data" size="10" maxlength="12"> (formato: DD/MM/YYYY)<br>
+                    
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </form>
+            </div>
+            <div id="menuDir">
+                <h2>Próximo Jogo</h2>
+                <hr>
+                <figure id="versus"><img src="img/jogo.jpg" alt=""/></figure>
+                <br><br>
+                <h2>Último Jogo</h2>
+                <hr>
+                <p>Grêmio 1 x 0 Fluminense</p>
+                <br><br>
+                <a href="" class="ingressos">Ingressos Aqui</a>
+            </div>
+        </div>
+    </body>
+</html>
