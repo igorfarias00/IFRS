@@ -150,6 +150,10 @@ a.ingressos {
     width: 50%;
 }
 
+#tabela {
+   border-collapse: collapse;
+
+}
 
 #tabela th, td{
     border: 2px solid #0099ff;
