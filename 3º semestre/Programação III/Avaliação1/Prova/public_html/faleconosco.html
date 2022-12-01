@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<!--PROVA REALIZADA POR IGOR BALEST FARIAS -->
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Canarinho Pistola</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="estilos.css" rel="stylesheet" type="text/css"/>
+
+        <script>
+            function validaCampo() {
+                var genero;
+                var mascara =/^(?:\()[0-9]{2}(?:\))\s?[0-9]{4,5}(?:-)[0-9]{4}$/
+                var telefone = document.getElementById('telefone')
+
+                if(document.getElementById('masculino').checked){
+                    genero = 'masculino';
+                } else if (document.getElementById('feminino').checked){
+                    genero = 'feminino';
+                } else {
+                    genero = 'naoMarcou';
+                }
+
+
+                if(genero != 'naoMarcou') {
+                    if(mascara.test(telefone.value)){
+                        alert('CAMPOS PREENCHIDOS CORRETAMENTE')
+                    } else {
+                        alert('telefone no formato inválido!!')
+                    }
+                } else {
+                    alert('Escolha um gênero!')
+                }
+
+
+            }
+
+        </script>
+    </head>
+    <body>
+        <div id="principal">
+            <div id="banner">
+                
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="origem.html">Origem</a></li>
+                    <li><a href="copa2014.html">Copa de 2014</a></li>
+                    <li><a href="copa2018.html">Copa de 2018</a></li>
+                    <li><a href="faleconosco.html">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+            <div id="conteudo">
+                <h1>Fale Conosco</h1>
+                <hr>
+                
+                <form action="#" method="post" id="faleConosco" onsubmit="validaCampo()" >
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" size="30"><br><br>
+                    
+                    <label for="email">E-mail: </label>
+                    <input type="text" name="email" id="email" size="50"><br><br>
+                    
+                    <label for="telefone">Telefone: </label>
+                    <input type="text" name="telefone" id="telefone" size="20" placeholder="(99) 9999-9999" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{4})-([0-9]{4})"><br><br>
+
+                    <fieldset>
+                        <legend>Gênero: </legend>
+                        <input type="radio" name="genero" value="masculino"  id="masculino"> Masculino
+                        <input type="radio" name="genero" value="feminino"  id="feminino"> Feminino </br>
+                    </fieldset>
+
+                    <label for="comentario">Comentario: </label></br>
+                    <textarea id="comentario"></textarea><br>
+
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </form>
+            </div>
+
+
+            <div id="rodape">
+                <footer>
+                    <h2>&copy;Copyright 2022 Organizações Tabajaras S.A</h2>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

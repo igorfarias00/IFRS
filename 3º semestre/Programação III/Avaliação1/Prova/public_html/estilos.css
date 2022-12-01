@@ -1,0 +1,154 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 30 de nov. de 2022, 10:02:50
+    Author     : SAMSUNG
+*/
+
+body {
+    background-color: #ffff00;
+}
+
+#principal {
+    position: absolute;
+    top: 0px;
+    left: 10%;
+    width: 80%;
+    height: 750px;
+    background-color: #66ff66;
+}
+
+#banner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 215px;
+    background-image: url('img/banner2.jpeg');
+    background-size: 50%;
+}
+
+#menu {
+    position: absolute;
+    top: 215px;
+    left: 2px;
+    width: 100%;
+    display: block;
+}
+
+#conteudo {
+    position: absolute;
+    top: 245px;
+    left: 0px;
+    width: 100%;
+}
+
+
+#rodape {
+    text-align: center;
+    position: relative;
+    background-color: #0099ff;
+    width: 100%;
+    top: 95%;
+    height: 50px;
+}
+
+#rodape footer{
+    padding-top: 4px;
+    margin: 15px;
+    color: #000000;
+}
+
+#rodape h2{
+    font-size: 12pt;
+    font-weight: lighter;
+}
+
+
+
+#menu ul {
+    width: 100%;
+    margin-top: 0px;
+    padding-left: 0; 
+    display: block;
+}
+
+#menu li {
+    width: 19.89%;
+    position:relative;
+    float:left;
+    border-right:1px solid #c0c0c0;
+    transition: 500ms;
+}
+
+#menu li:hover {
+    background-color: #0000f8;
+    box-shadow: 5px 5px 5px 5px #fff200;
+}
+
+#menu ul li {
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    height: 20px;
+    background-color: #0099ff;
+}
+
+#menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+p {
+    text-align: justify;
+    font-family: Verdana;
+}
+
+#identado {
+    text-indent: 36pt;
+}
+
+h1 {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 18pt;
+}
+
+h2 {
+    font-family: Verdana;
+    font-size: 14pt;
+}
+
+
+/* ---------------------------------------   copoa2018 tabela da final     ----------*/
+#tabelaFinal, td, th {
+    text-align: center;
+    border: 1px solid #000000;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+#tabelaFinal {
+    margin-left: auto;
+    margin-right: auto;
+    width: 68vw;
+}
+
+/* ---------------------------------------   formulario fale conosco   ----------*/
+
+#faleConosco label{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #0099ff ;
+}
+
+#comentario {
+    width: 95%;
+    height: 160px;
+}
