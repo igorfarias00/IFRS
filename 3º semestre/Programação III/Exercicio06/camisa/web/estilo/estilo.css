@@ -1,0 +1,28 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 11 de dez. de 2022, 20:48:59
+    Author     : bales
+*/
+
+#corpo {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 2px 0px 5px 0px red;
+    padding: 30px;
+    
+}
+
+
+#camisas input {
+       margin: 13px;
+    
+}
+
+#camisas #tamanhos, #generos {
+    width: 25vw;
+} 
+

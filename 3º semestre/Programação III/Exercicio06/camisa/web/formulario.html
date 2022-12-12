@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html lang="pt-br">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="estilo/estilo.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="corpo">
+        <form method="post" id="camisas">
+            <label for="cpf">CPF do Cliente</label>
+            <input type="number" id="cpf"><br>
+            
+            <label for="cliente" >Nome do cliente: </label>
+            <input type="text" id="cliente"><br>
+            
+            <label for="modelo">Modelo da Camisa</label>
+            <select name="modelos" id="modelo">
+                <option value="tipo01">Camiseta</option>
+                <option value="tipo02">Camisa Polo - Manga Curta</option>
+                <option value="tipo03">Camisa Polo - Manga Longa</option>
+                <option value="tipo04"> Camisa Social</option>
+            </select> <br><br>
+            
+            <fieldset id="generos">
+                <legend>Genêro: </legend>
+                <input type="radio" name="genero" id="masculino" value="masculino"> <label for="masculino"> Masculino </label><br>
+                <input type="radio" name="genero" id="feminino" value="feminino"> <label for="feminino"> Feminino </label><br>
+            </fieldset>
+            
+            <fieldset id="tamanhos">
+                <legend>Tamanho: </legend>
+                <input type="radio" name="tamanho" id="Pequena" value="p"> <label for="Pequena">Pequena</label> <br>
+                <input type="radio" name="tamanho" id="Media" value="m"> <label for="Media"> Média </label><br>
+                <input type="radio" name="tamanho" id="Grande" value="g"> <label for="Grande">Grande </label><br>
+            </fieldset>
+            
+            <label for="quantidade">Quantidade: </label>
+            <input type="number" id="quantidade"><br>
+            
+            <button type="submit">Solicitar Pedido</button>
+            <button type="reset">Limpar</button>
+        </form>
+        </div>
+    </body>
+</html>
