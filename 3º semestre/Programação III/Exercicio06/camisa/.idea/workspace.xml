@@ -23,7 +23,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/bales/Documents/GitHub/IFRS/3º semestre/Programação III/Exercicio06/camisa",
+    "last_opened_file_path": "C:/Users/bales/Documents/GitHub/SistemasOperacionais-IFRSRestintga-2-2022/sistemasOperacionasIFRS",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -117,6 +117,7 @@
       <updated>1670784324593</updated>
       <workItem from="1670784326242" duration="40000" />
       <workItem from="1670784392134" duration="2418000" />
+      <workItem from="1671383564014" duration="64000" />
     </task>
     <servers />
   </component>
