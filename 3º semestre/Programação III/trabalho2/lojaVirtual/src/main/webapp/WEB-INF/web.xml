@@ -19,4 +19,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>AchaUsuario</display-name>
+    <servlet-name>AchaUsuario</servlet-name>
+    <servlet-class>AchaUsuario</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AchaUsuario</servlet-name>
+    <url-pattern>/AchaUsuario</url-pattern>
+  </servlet-mapping>
 </web-app>

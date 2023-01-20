@@ -32,11 +32,24 @@
                     </nav>
                 </div>
             </header>        
-
+				
 
             <div id="quadroCentral">
-
-
+            	<h1>Usuários</h1>
+            	<hr><br>
+                <form action="AchaUsuario" method="get" onsubmit="">
+                    <label for="pesquisa">Nome: </label><br>
+                    <input id="pesquisa" name="filtrar" type="search">
+                    <input id="btFiltrar" name="filtrar" type="submit" value="filtrar">
+                </form>
+                <br>
+                <form>
+                    <input id="inserir" name="inserir" value="Inserir" type="submit">  
+                    <input id="atualizar" name="atulizar" value="Atualizar" type="submit">  
+                    <input id="excluir" name="Excluir" value="Excluir" type="reset"> 
+                    
+                </form>
+			
                
             </div>   
         </div> 
