@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link href="CssHallowen.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/x-icon" href="imagens/favicon/favicon.ico">
+        <title> Halloween </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    </head> 
+    <body>
+        <div id="corpo">
+            <header>
+                <div class="banner">
+                    <figure >
+                        <img src="imagens/banner.png" >
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+                <div class="menuLateral">
+                    <nav id="navMenu">
+                        <menu id="menu">
+                            <li><a href="index.html"><img src="imagens/skull.png"> Pagina inicial </a></li>
+                            <li><a href="pesquisa.html"><img src="imagens/pumpkin-smile.png"> Fantasias Engraçadas </a></li>
+                            <li><a href="form.html"><img src="imagens/ghost.png"> Competição de Fantasias </a></li>
+                        </menu>
+                    </nav>
+                </div>
+            </header>       
+
+
+            <div id="quadroCentral">
+                <h1>Competição de Fantasias</h1>
+
+               <form method="post" id="oFormulario" action="processamento.html">
+                    <div id="inscricao">
+                        <h1>Inscrição</h1>
+
+                        <fieldset id="texto">
+                            <legend>Fantasia</legend>
+                            <label for="nome">Nome</label>
+                            <input type="text" id="nome">
+                        </fieldset>
+
+                        <fieldset id="selecao">
+                            <legend>Pais de Origem: </legend>
+                            <select name="paises" id="pais">
+                                <option value="brasil">Brasil</option>
+                                <option value="uruguai">Uruguai</option>
+                                <option value="argentina">Argentina</option>
+                            </select>
+                        </fieldset>
+
+                        <fieldset id="textarea">
+                            <legend>Descrição: </legend>
+                            <textarea></textarea>
+                        </fieldset>
+
+                        <fieldset id="catCompeticao">
+                            <legend> Categoria</legend>
+                            <label for="horror"> Engraçadas </label><input type="radio" name="categoria" id="horror">
+                            <label for="humano"> Humano</label><input type="radio" name="categoria" id="humano">
+                            <label for="frankestein"> Frankestein</label><input type="radio" name="categoria" id="frankestein">
+                        </fieldset>
+
+                        <fieldset id="apresentacao">
+                            <legend>Apresentação da Fantasia</legend>
+                            <label for="musica"> Musica</label><input type="checkbox" id="musica" value="musica">
+                            <label for="danca"> Danca</label><input type="checkbox" id="danca" value="danca">
+                            <label for="teatro"> Teatro</label><input type="checkbox" id="teatro" value="teatro">
+                        </fieldset>
+                        <br>
+                        <input type="reset" id="cancelar" value="Cancelar">
+                        <input type="submit" id="enviar" value="Salvar">
+                    </div>
+
+               </form>
+            </div>   
+        </div> 
+    </body>
+</html>

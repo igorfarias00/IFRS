@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link href="CssHallowen.css" rel="stylesheet" type="text/css"/>
+        <link rel="icon" type="image/x-icon" href="imagens/favicon/favicon.ico">
+        <title> Halloween </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    </head> 
+    <body>
+        <div id="corpo">
+            <header>
+                <div class="banner">
+                    <figure >
+                        <img src="imagens/banner.png" >
+                        <figcaption></figcaption>
+                    </figure>
+                </div>
+                <div class="menuLateral">
+                    <nav id="navMenu">
+                        <menu id="menu"> <!-- fazer cor diferente para pagina atual -->
+                            <li><a href="index.html"><img src="imagens/skull.png"> Pagina inicial </a></li>
+                            <li><a href="pesquisa.html"><img src="imagens/pumpkin-smile.png"> Fantasias Engraçadas</a></li>
+                            <li><a href="form.html"><img src="imagens/ghost.png"> Competição de Fantasias</a></li>
+                        </menu>
+                    </nav>
+                </div>
+            </header>
+            
+            <div id="quadroCentral">
+               
+                <h1>Fantasias Engraçadas </h1>
+
+                <form >
+                    <label for="pesquisa">Nome da Fantasia</label>
+                    <input id="pesquisa" name="filtrar" type="search">
+                    <input id="btFiltrar" name="filtrar" type="submit" value="filtrar">
+                </form>
+                <br>
+                <form>
+                    <input id="inserir" name="inserir" value="Inserir" type="submit">  
+                    <input id="atualizar" name="atulizar" value="Atualizar" type="submit">  
+                    <input id="excluir" name="Excluir" value="Excluir" type="reset"> 
+                    
+                </form>
+
+            
+                <table class="tabela" >
+                    <tr class="cabecalho">
+                        <th> Seleção </th>
+                        <th> CÓD. </th> 
+                        <th> Foto </th> 
+                        <th> País </th> 
+                        <th> Autor</th> 
+                        <th> Nome</th>
+                    </tr>
+
+                    <tr class="dados1">
+                        <td> <input type="checkbox" name="selecao"> </td>
+                        <td> 001 </td> 
+                        <td>
+                            <img src="imagens/fantasias/familia-s.jpg" alt="quatro pessoas fantasiadas como a familia simpsons, porem a fantasia não é muito boa. da esquerda para a direita estão o Bart, Marge, Lisa e o Homer"> 
+                            
+                        </td> 
+                        <td> Com certeza nos estados unidos </td>
+                        <td> Desconhecido </td>
+                        <td> Família Simpsons </td>
+                    </tr>
+
+                    <tr class="dados2">
+                        <td> <input type="checkbox" name="selecao"> </td>
+                        <td> 002 </td> 
+                        <td> <img src="imagens/fantasias/fiona.jpg" alt="uma pessoa fantasiado de fiona, do filme shrek, porem a cara esta muito inchada, como se fosse uma reação alergica, e a fantasia parece estar caindo"> </td> 
+                        <td> Desconhecido </td>
+                        <td> Desconhecido </td>
+                        <td> Fiona Com Reação Alérgica </td>
+                    </tr>
+
+                    <tr class="dados1">
+                        <td> <input type="checkbox" name="selecao"> </td>
+                        <td> 003 </td> 
+                        <td> <img src="imagens/fantasias/minion-fantasma.jpg" alt="uma pessoa fantasia como um minion, do filme meu malvado favorito, em cima de uma moto. ele esta no meio de varias motos"> </td> 
+                        <td> Você sabe onde... </td>
+                        <td> Desconhecido </td>
+                        <td> Motoqueiro Minion Fantasma </td>
+
+                    </tr>
+
+                    <tr class="dados2">
+                        <td> <input type="checkbox" name="selecao"> </td>
+                        <td> 004 </td> 
+                        <td> <img src="imagens/fantasias/nascimento.jpg" alt="quatro pessoas ao redor de uma pessoa deitada sobre uma cama com as pernas abertas, e do meio das pernas esta saindo uma cabeça de um adulto, como se estivesse nascendo"> </td> 
+                        <td> Desconhecido </td>
+                        <td> Desconhecido </td>
+                        <td> O nascimento </td>
+                    </tr>
+
+                    <tr class="dados1">
+                        <td> <input type="checkbox" name="selecao"> </td>
+                        <td> 005 </td> 
+                        <td> <img src="imagens/fantasias/troopers-em-crise.jpg" alt="três pessoas fantasiadas com storm troopers, mas com fantasias feitas de papelao e bem quadradas"> </td> 
+                        <td> Desconhecido </td>
+                        <td> Desconhecido </td>
+                        <td> Troopers em crise </td>
+                    </tr>
+
+                </table>
+            </div> 
+      
+        </div> 
+    </body>
+</html>
+
