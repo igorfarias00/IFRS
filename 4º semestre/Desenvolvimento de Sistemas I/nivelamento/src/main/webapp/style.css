@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+#central {
+	width: 80vw;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 15px;	
+}
+
+#central input, button {
+	margin: 20px;
+}
+
+#central button {
+	width: 15vw;
+	height: 3vh;
+}
+
+#listaTelUsuario {
+	background-color: aqua;
+	width: 50vw;
+	height: 5vh;
+}
