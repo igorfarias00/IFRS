@@ -1,4 +1,4 @@
-package br.com.nivelamento.model.entity;
+package br.com.nivelamento.DTO;
 
 
 public class Contato {
@@ -6,14 +6,19 @@ public class Contato {
 	private String nome;
 	private String email;
 	private Telefone listaTelefone;
+
 	
-	public Contato(int id, String nome, String email, Telefone lista) {
-		this.setId(id);
+	public Contato() {
+		
+	}
+	
+	public Contato(String nome, String email, Telefone lista) {
 		this.setNome(nome);
 		this.setEmail(email);
 		this.setListaTelefone(lista);
 		
 	}
+	
 	
 	
 	

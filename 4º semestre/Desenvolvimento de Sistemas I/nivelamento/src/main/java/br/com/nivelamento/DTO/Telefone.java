@@ -1,4 +1,4 @@
-package br.com.nivelamento.model.entity;
+package br.com.nivelamento.DTO;
 
 import java.util.ArrayList;
 
@@ -41,7 +41,7 @@ public class Telefone {
 			
 		}
 		if(position == -1) {
-			return "Não encontrou nenhum numero igual ao inserido!";
+			return "Nï¿½o encontrou nenhum numero igual ao inserido!";
 		} else {
 			return this.telefones.get(position);
 		}
