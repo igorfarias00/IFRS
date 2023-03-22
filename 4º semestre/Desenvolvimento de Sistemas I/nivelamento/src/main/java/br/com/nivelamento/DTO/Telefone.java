@@ -11,6 +11,10 @@ public class Telefone {
 		
 	}
 	
+	public Telefone() {
+		
+	}
+	
 	
 	
 // add telefone
@@ -51,12 +55,12 @@ public class Telefone {
 	
 // getter e setter
 	
-	public String getTelefones() {
-		String tel = ""; 
-		for(int i = 0; i < this.telefones.size(); i++) {
-			tel += this.telefones.get(i) + "<br>";
-		}
-		return tel;
+	public ArrayList<String> getTelefones() {
+		return this.telefones;
+	}
+	
+	public int tamLista() {
+		return this.telefones.size();
 	}
 	
 	public void setTelefones(ArrayList<String> telefones) {

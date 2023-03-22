@@ -8,7 +8,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Listando Contatos</title>
+		<title> Listando Contatos</title>
 	</head>
 	<body>
 		<%
