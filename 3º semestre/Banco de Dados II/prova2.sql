@@ -29,7 +29,8 @@ SELECT * FROM antigo_chefe;
 SELECT * FROM empresa WHERE cnpj = '123456-0002';
 
 
-SELECT (select funcionario.funcionario_id from funcionario 
+SELECT 	chefe from setor where (
+		(select funcionario.funcionario_id from funcionario 
 
 		where funcionario_id = setor.chefe) AS chefe,
 
@@ -39,7 +40,7 @@ SELECT (select funcionario.funcionario_id from funcionario
 
         where funcionario.setor_id = setor.setor_id)) AS salario,
 
-        (select * from empresa 
+        (select nome from empresa 
 
         where empresa.cnpj = '123456-0002') AS empresa
 
@@ -48,6 +49,8 @@ SELECT (select funcionario.funcionario_id from funcionario
         WHERE setor.chefe is NOT NULL
 
         order by salario DESC;
+        
+        
         
 UPDATE setor SET chefe = 2 WHERE chefe = (SELECT (select funcionario.funcionario_id from funcionario 
 
@@ -59,7 +62,7 @@ UPDATE setor SET chefe = 2 WHERE chefe = (SELECT (select funcionario.funcionario
 
         where funcionario.setor_id = setor.setor_id)) AS salario,
 
-        (select * from empresa 
+        (select nome from empresa 
 
         where empresa.cnpj = '123456-0002') AS empresa
 
@@ -67,7 +70,7 @@ UPDATE setor SET chefe = 2 WHERE chefe = (SELECT (select funcionario.funcionario
 
         WHERE setor.chefe is NOT NULL
 
-        order by salario DESC);
+        order by salario DESC) COLUMN chefe;
 
 UPDATE setor SET chefe = 10 WHERE setor.setor_id = 1;
 
