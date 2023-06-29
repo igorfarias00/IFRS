@@ -2,6 +2,7 @@ package br.com.ifrs.restinga.brasfootIbtfs.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 import java.util.Date;
 
@@ -21,6 +22,9 @@ public class Jogador {
     private int qualidade;
     private int cartoes;
     private boolean suspenso;
+
+
+    @OneToOne
     private Time time;
 
 

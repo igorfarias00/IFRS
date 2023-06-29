@@ -1,7 +1,6 @@
 package br.com.ifrs.restinga.brasfootIbtfs.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,8 +14,13 @@ public class Time {
     private String apelido;
     private Date fundacao;
     private String cidade;
+
+    @OneToMany()
     private ArrayList<Jogador> platel; // verificar lista em persistencia
+
+    @OneToMany()
     private ArrayList<Jogador> relacionados;
+
 
 
     public Time(){
@@ -96,7 +100,7 @@ public class Time {
         return platel;
     }
 
-    public void setPlatel(List<Jogador> platel) {
+    public void setPlatel(ArrayList<Jogador> platel) {
         this.platel = platel;
     }
 
@@ -104,7 +108,7 @@ public class Time {
         return relacionados;
     }
 
-    public void setRelacionados(List<Jogador> relacionados) {
+    public void setRelacionados(ArrayList<Jogador> relacionados) {
         this.relacionados = relacionados;
     }
 }
