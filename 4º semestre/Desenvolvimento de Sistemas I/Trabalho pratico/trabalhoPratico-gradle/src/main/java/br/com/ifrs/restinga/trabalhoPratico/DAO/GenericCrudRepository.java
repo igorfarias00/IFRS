@@ -1,4 +1,4 @@
-package br.com.ifrs.restinga.aula0628.DAO;
+package br.com.ifrs.restinga.trabalhoPratico.DAO;
 
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.NoRepositoryBean;
